@@ -24,7 +24,7 @@ local p_5 = Instance.new("TextLabel")
 local Setting_2 = Instance.new("TextButton")
 local p_6 = Instance.new("TextLabel")
 
---Properties:
+--Properties:c
 
 ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
