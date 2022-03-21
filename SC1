@@ -224,7 +224,7 @@ p_6.TextSize = 14.000
 
 -- Scripts:
 
-local function GLFRZ_fake_script() -- AutoFram.LocalScript 
+local function QEXHK_fake_script() -- AutoFram.LocalScript 
 	local script = Instance.new('LocalScript', AutoFram)
 
 	local AutoFram = script.Parent.AutoFramV
@@ -244,8 +244,8 @@ local function GLFRZ_fake_script() -- AutoFram.LocalScript
 	end)
 	
 end
-coroutine.wrap(GLFRZ_fake_script)()
-local function QRINBDB_fake_script() -- AutoFram.Auto 
+coroutine.wrap(QEXHK_fake_script)()
+local function YZHD_fake_script() -- AutoFram.Auto 
 	local script = Instance.new('LocalScript', AutoFram)
 
 	_G.AutoFarm_Level = true
@@ -391,8 +391,8 @@ local function QRINBDB_fake_script() -- AutoFram.Auto
 		end) 
 	end)
 end
-coroutine.wrap(QRINBDB_fake_script)()
-local function UKVWGNT_fake_script() -- Frame.LocalScript 
+coroutine.wrap(YZHD_fake_script)()
+local function MAJYBK_fake_script() -- Frame.LocalScript 
 	local script = Instance.new('LocalScript', Frame)
 
 	local icon = script.Parent.icon
@@ -482,4 +482,4 @@ local function UKVWGNT_fake_script() -- Frame.LocalScript
 	
 	end)
 end
-coroutine.wrap(UKVWGNT_fake_script)()
+coroutine.wrap(MAJYBK_fake_script)()
