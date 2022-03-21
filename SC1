@@ -224,33 +224,35 @@ p_6.TextSize = 14.000
 
 -- Scripts:
 
-local function AHBCIXQ_fake_script() -- AutoFram.LocalScript 
+local function GLFRZ_fake_script() -- AutoFram.LocalScript 
 	local script = Instance.new('LocalScript', AutoFram)
 
-	local AutoFram = script.Parent.AutoFram
+	local AutoFram = script.Parent.AutoFramV
 	local AF = script.Parent.AF
+	d = false
 	AutoFram.MouseButton1Click:Connect(function()
-		if AF == false then
+		if d == false then
 			AutoFram.BackgroundColor3 = Color3.new(0, 0.768627, 1)
 			AF = true
-		elseif AF == true then
+			d = true
+		elseif d == true then
 			AutoFram.BackgroundColor3 = Color3.new(0, 0, 0)
 			AF = false
+			d = false
 			end
 		
 	end)
 	
 end
-coroutine.wrap(AHBCIXQ_fake_script)()
-local function JVZUIZ_fake_script() -- AutoFram.Auto 
+coroutine.wrap(GLFRZ_fake_script)()
+local function QRINBDB_fake_script() -- AutoFram.Auto 
 	local script = Instance.new('LocalScript', AutoFram)
 
 	_G.AutoFarm_Level = true
 	_G.FastAttack = true
 	
-	local AF = script.Parent.AF
 	
-	
+	local af = script.Parent.AF
 	
 	
 	
@@ -258,7 +260,7 @@ local function JVZUIZ_fake_script() -- AutoFram.Auto
 	
 	function checklevel()
 		local Level = game:GetService("Players").LocalPlayer.Data.Level.Value
-		if Level == 1 or Level <= 9 and AF.Value == true then
+		if Level == 1 or Level <= 9 and af.Value == true then
 			MON = "Bandit [Lv. 5]"
 			QUESTTITLE = "Bandit"
 			QUESTPOS = CFrame.new(1060.0158691406, 16.424287796021, 1547.9769287109)
@@ -306,19 +308,19 @@ local function JVZUIZ_fake_script() -- AutoFram.Auto
 	
 	spawn(function()
 		while wait() do
-			if _G.AutoFarm_Level then
+			if _G.AutoFarm_Leveland af.Value == true then
 				pcall(function()
 					checklevel()
 	
-					if not string.find(game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text,QUESTTITLE) and AF.Value == true then
+					if not string.find(game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text,QUESTTITLE) then
 						local args = {
 							[1] = "AbandonQuest"
 						}
 						game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
 					end
-					if game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Visible == false and AF.Value == true then
+					if game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Visible == false then
 	
-						if game:GetService("Players").LocalPlayer.Data.SpawnPoint.Value == SPAWNPOINT and AF.Value == true then
+						if game:GetService("Players").LocalPlayer.Data.SpawnPoint.Value == SPAWNPOINT then
 							local args = {
 								[1] = "SetTeam",
 								[2] = "Pirates"
@@ -347,7 +349,7 @@ local function JVZUIZ_fake_script() -- AutoFram.Auto
 					end
 					for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
 						for i2,v2 in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
-							if v.Name == MON and v2.Name == MON and AF.Value == true then
+							if v.Name == MON and v2.Name == MON then
 								v2.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame
 								v2.HumanoidRootPart.CanCollide = false
 								game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * Method
@@ -365,7 +367,7 @@ local function JVZUIZ_fake_script() -- AutoFram.Auto
 	spawn(function()
 		game:GetService("RunService").RenderStepped:Connect(function()
 			pcall(function()
-				if _G.FastAttack and _G.AutoFarm_Level and AF.Value == true then
+				if _G.FastAttack and _G.AutoFarm_Level and af.Value == true then
 					local Combat = require(game:GetService("Players").LocalPlayer.PlayerScripts.CombatFramework)
 					local Cemara = require(game:GetService("Players").LocalPlayer.PlayerScripts.CombatFramework.CameraShaker)
 					Cemara.CameraShakeInstance.CameraShakeState = {FadingIn = 3, FadingOut = 2, Sustained = 0, Inactive = 1}
@@ -389,8 +391,8 @@ local function JVZUIZ_fake_script() -- AutoFram.Auto
 		end) 
 	end)
 end
-coroutine.wrap(JVZUIZ_fake_script)()
-local function KWEFARB_fake_script() -- Frame.LocalScript 
+coroutine.wrap(QRINBDB_fake_script)()
+local function UKVWGNT_fake_script() -- Frame.LocalScript 
 	local script = Instance.new('LocalScript', Frame)
 
 	local icon = script.Parent.icon
@@ -480,4 +482,4 @@ local function KWEFARB_fake_script() -- Frame.LocalScript
 	
 	end)
 end
-coroutine.wrap(KWEFARB_fake_script)()
+coroutine.wrap(UKVWGNT_fake_script)()
